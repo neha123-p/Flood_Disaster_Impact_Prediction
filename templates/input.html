@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<style>
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial;
+}
+
+/* Full screen background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url('/static/disaster.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 8px;
+}
+
+/* Box styling */
+.box {
+    background: rgba(255,255,255,0.9);
+    padding: 30px;
+    width: 350px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+button {
+    background: blue;
+    color: white;
+    padding: 10px;
+    border: none;
+}
+</style>
+</head>
+<body>
+<div class="slideshow">
+    <img src="{{ url_for('static', filename='img1.jpg') }}">
+    <img src="{{ url_for('static', filename='img2.jpg') }}">
+    <img src="{{ url_for('static', filename='img3.jpg') }}">
+    
+</div>
+<div class="box">
+<h2>📊 Enter Data</h2>
+<form action="/predict" method="post">
+    <form action="/predict" method="post">
+
+<input type="hidden" name="disaster" value="{{ disaster }}">
+
+{% if disaster == "Flood" %}
+    <input name="rain" placeholder="Rainfall">
+    <input name="river" placeholder="River Level">
+{% elif disaster == "Fire" %}
+    <input name="temp" placeholder="Temperature">
+    <input name="humidity" placeholder="Humidity">
+    <input name="wind" placeholder="Wind Speed">
+{% elif disaster == "Earthquake" %}
+    <input name="magnitude" placeholder="Magnitude">
+    <input name="depth" placeholder="Depth">
+{% endif %}
+
+<input name="pop" placeholder="Population">
+<input name="area" placeholder="Area">
+
+<button>Predict</button>
+</form>
+</div>
+
+</body>
+</html>

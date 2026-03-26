@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<style>
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial;
+}
+
+/* Full screen background */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: url('/static/disaster.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+/* Box styling */
+.box {
+    background: rgba(255,255,255,0.9);
+    padding: 30px;
+    width: 350px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+<body>
+<div class="slideshow">
+    <img src="{{ url_for('static', filename='img1.jpg') }}">
+    <img src="{{ url_for('static', filename='img2.jpg') }}">
+    <img src="{{ url_for('static', filename='img3.jpg') }}">
+    <img src="{{ url_for('static', filename='img4.jpg') }}">
+</div>
+<div class="box">
+<h2>🌍 Select Disaster</h2>
+<form action="/location" method="post">
+<select name="disaster">
+<option>Flood</option>
+<option>Fire</option>
+<option>Earthquake</option>
+</select>
+<br><br>
+<button>Next ➡</button>
+</form>
+</div>
+
+</body>
+</html>

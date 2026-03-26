@@ -1,0 +1,11 @@
+Year,State,District,Rainfall,River_Level,Population,Area,People_Affected,Deaths,Agri_Loss,Economic_Loss,Infra_Damage
+2018,Kerala,Ernakulam,450,9.5,12000,150,11000,120,25,120,70
+2019,Karnataka,Belgaum,380,8.5,9000,130,8000,90,20,90,60
+2020,Bihar,Patna,420,9.0,15000,160,13000,150,30,140,75
+2021,Assam,Guwahati,390,8.8,10000,140,9000,100,22,100,65
+2022,UP,Gorakhpur,350,8.2,8000,120,7000,80,18,80,55
+2023,Tamil Nadu,Chennai,300,7.5,11000,100,6000,60,15,70,50
+2017,Maharashtra,Mumbai,320,7.8,13000,90,7500,70,17,85,58
+2016,West Bengal,Kolkata,360,8.1,14000,110,8500,85,19,95,62
+2015,Odisha,Cuttack,400,9.2,10000,135,9500,110,24,110,68
+2014,Gujarat,Surat,280,7.0,9000,95,5000,50,12,60,45

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login</title>
+
+<style>
+
+/* Body */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+/* 🔥 Slideshow Background */
+.slideshow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.slideshow img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    animation: slideShow 12s infinite;
+}
+
+/* Animation timing */
+.slideshow img:nth-child(1) { animation-delay: 0s; }
+.slideshow img:nth-child(2) { animation-delay: 4s; }
+.slideshow img:nth-child(3) { animation-delay: 8s; }
+
+@keyframes slideShow {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    30% { opacity: 1; }
+    40% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* 🌑 Overlay */
+.slideshow::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    top: 0;
+    left: 0;
+}
+
+/* 📦 Login Box */
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    background: rgba(255,255,255,0.9);
+    padding: 30px;
+    width: 320px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* Inputs */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+/* Button */
+button {
+    padding: 10px;
+    width: 100px;
+    background: #4facfe;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #2f80ed;
+    transform: scale(1.05);
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- 🔥 Background Slideshow -->
+<div class="slideshow">
+    <img src="{{ url_for('static', filename='img1.jpg') }}">
+    <img src="{{ url_for('static', filename='img2.jpg') }}">
+    <img src="{{ url_for('static', filename='img3.jpg') }}">
+</div>
+
+<!-- 🔐 Login Box -->
+<div class="box">
+    <h2>🔐 Authority Login</h2>
+
+    <form action="/login" method="post">
+        <input name="username" placeholder="Username" required>
+        <input name="password" type="password" placeholder="Password" required>
+        <button>Login</button>
+    </form>
+</div>
+
+</body>
+</html>
