@@ -28,3 +28,44 @@
     30% { opacity: 0; }
     100% { opacity: 0; }
 }
+/*  HIGH RISK */
+.high {
+    color: red;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0 0 10px red,
+                 0 0 20px red,
+                 0 0 40px darkred;
+}
+
+/*  MEDIUM RISK */
+.medium {
+    color: orange;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0 0 10px orange,
+                 0 0 20px orange,
+                 0 0 40px gold;
+}
+
+/*  LOW RISK */
+.low {
+    color: limegreen;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow: 0 0 10px limegreen,
+                 0 0 20px limegreen,
+                 0 0 40px green;
+}
+.high, .medium, .low {
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px;
+    }
+    to {
+        text-shadow: 0 0 20px;
+    }
+}

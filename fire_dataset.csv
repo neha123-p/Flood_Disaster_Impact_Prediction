@@ -1,0 +1,21 @@
+Year,State,District,Temperature,Humidity,Wind_Speed,Population,Area,People_Affected,Deaths,Agri_Loss,Economic_Loss,Infra_Damage
+2015,Karnataka,Mysuru,35,40,15,5000,80,1200,15,5,20,10
+2016,Tamil Nadu,Coimbatore,37,35,18,6000,90,1800,20,8,30,15
+2017,Kerala,Palakkad,34,45,12,4500,70,900,10,4,15,8
+2018,Andhra Pradesh,Anantapur,40,30,20,7000,100,2500,30,10,40,20
+2019,Maharashtra,Nagpur,38,32,17,6500,95,2100,25,9,35,18
+2020,Gujarat,Ahmedabad,41,28,22,8000,110,3000,35,12,50,25
+2021,Rajasthan,Jodhpur,42,25,24,7500,105,2800,32,11,45,22
+2022,Telangana,Hyderabad,39,33,19,9000,120,3200,40,14,60,30
+2023,Chhattisgarh,Raipur,36,38,16,5500,85,1500,18,6,25,12
+2024,Odisha,Sambalpur,37,36,14,5200,80,1300,16,5,22,11
+2015,Madhya Pradesh,Bhopal,38,34,18,7000,100,2200,28,9,35,18
+2016,Haryana,Gurgaon,39,30,20,8500,115,2700,33,11,45,22
+2017,Punjab,Amritsar,36,37,15,6000,90,1600,20,7,28,14
+2018,West Bengal,Bankura,35,42,13,4800,75,1000,12,4,18,9
+2019,Bihar,Gaya,37,39,16,5300,85,1400,17,6,24,12
+2020,Uttar Pradesh,Kanpur,40,31,21,9000,120,3100,38,13,55,28
+2021,Assam,Dibrugarh,34,48,12,4500,70,800,9,3,12,6
+2022,Jharkhand,Ranchi,36,40,14,5000,80,1200,15,5,20,10
+2023,Delhi,New Delhi,41,29,23,10000,130,3500,45,15,65,35
+2024,Goa,Panaji,33,50,10,3000,60,600,8,2,10,5

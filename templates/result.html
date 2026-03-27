@@ -2,8 +2,8 @@
 <html>
 <head>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-<style>
 
+<style>
 /* Full page center */
 body {
     margin: 0;
@@ -11,59 +11,68 @@ body {
     font-family: Arial;
 
     display: flex;
-    justify-content: center;   /* horizontal center */
-    align-items: center;       /* vertical center */
+    justify-content: center;
+    align-items: center;
     height: 100vh;
 
     background: url('/static/img1.jpg') no-repeat center center/cover;
 }
 
-/* Login box */
+/* Result box */
 .box {
     background: rgba(255,255,255,0.9);
     padding: 30px;
     width: 350px;
     border-radius: 15px;
     text-align: center;
-    align-items: center;
     box-shadow: 0 0 20px rgba(0,0,0,0.3);
 }
+
 h2 {
     color: #11998e;
 }
+
 .result {
     margin: 10px;
     font-size: 18px;
 }
-.high { color: red; }
-.medium { color: orange; }
-.low { color: green; }
+
+/* 🔥 Glow Effects */
+.high {
+    color: red;
+    font-weight: bold;
+    text-shadow: 0 0 10px red, 0 0 20px darkred;
+}
+
+.medium {
+    color: orange;
+    font-weight: bold;
+    text-shadow: 0 0 10px orange, 0 0 20px gold;
+}
+
+.low {
+    color: green;
+    font-weight: bold;
+    text-shadow: 0 0 10px limegreen, 0 0 20px green;
+}
 </style>
 </head>
 
 <body>
-<div class="slideshow">
-    <img src="{{ url_for('static', filename='img1.jpg') }}">
-    <img src="{{ url_for('static', filename='img2.jpg') }}">
-    <img src="{{ url_for('static', filename='img3.jpg') }}">
-</div>
+
 <div class="box">
-    <h2>📈 Flood Impact Result</h2>
+    <h2>Flood Impact Result</h2>
 
-    <p class="result">👥 People Affected: <b>{{ people }}</b></p>
-    <p class="result">⚰ Number of Deaths: <b>{{ deaths }}</b></p>
-    <p class="result">🌾 Agricultural Loss (lakhs): <b>{{ agri }}</b></p>
-    <p class="result">💰 Economic Loss (lakhs): <b>{{ economic }}</b></p>
-    <p class="result">🏗 Infrastructure Damage (%): <b>{{ infra }}</b></p>
+    <p class="result">People Affected: <b>{{ people }}</b></p>
+    <p class="result">Number of Deaths: <b>{{ deaths }}</b></p>
+    <p class="result">Agricultural Loss (lakhs): <b>{{ agri }}</b></p>
+    <p class="result">Economic Loss (lakhs): <b>{{ economic }}</b></p>
+    <p class="result">Infrastructure Damage (%): <b>{{ infra }}</b></p>
 
-    <!-- Impact Level -->
-    {% if economic > 80 %}
-        <h3 class="high">🚨 HIGH IMPACT 🔴</h3>
-    {% elif economic > 40 %}
-        <h3 class="medium">⚠ MEDIUM IMPACT 🟡</h3>
-    {% else %}
-        <h3 class="low">✅ LOW IMPACT 🟢</h3>
-    {% endif %}
+    <!-- ✅ SINGLE IMPACT DISPLAY -->
+    <h3 class="{{ risk_class }}">
+        {{ risk }}
+    </h3>
 
 </div>
 
